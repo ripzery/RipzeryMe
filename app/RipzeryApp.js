@@ -16,9 +16,9 @@ class RipzeryApp extends React.Component {
         this.cursor = {
             show: true,
             blink: true,
-            element: ':P',
+            element: '|',
             hideWhenDone: true,
-            hideWhenDoneDelay: 1000
+            hideWhenDoneDelay: 500
         }
     }
     render() {
@@ -26,7 +26,7 @@ class RipzeryApp extends React.Component {
             <div style={styles.centered}>
                 <h1>
                     <Typist avgTypingSpeed={4} startDelay={2000} cursor={this.cursor}>
-                        Well...well
+                        Hi hi. I'm still working on this...
                     </Typist>
                 </h1>
             </div>
