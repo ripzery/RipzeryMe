@@ -25,8 +25,8 @@ class RipzeryApp extends React.Component {
         return (
             <div style={styles.centered}>
                 <h1>
-                    <Typist avgTypingSpeed={4} startDelay={2000} cursor={this.cursor}>
-                        Hi hi. I'm still working on this...
+                    <Typist avgTypingSpeed={40} startDelay={2000} cursor={this.cursor}>
+                        Hi oh, hi there! I'm still working on this...
                     </Typist>
                 </h1>
             </div>
