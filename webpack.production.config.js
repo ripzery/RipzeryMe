@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     devtool: "cheap-module-source-map",
@@ -12,6 +13,9 @@ module.exports = {
         publicPath: '/static/'
     },
     plugins: [
+        new ExtractTextPlugin('app.css', {
+            allChunks: true
+        }),
         new webpack.DefinePlugin({
             'process.env':{
                 'NODE_ENV': JSON.stringify('production')
@@ -44,6 +48,10 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loaders: ['react-hot', 'babel?presets[]=es2015,presets[]=react,presets[]=stage-2']
+            },
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
             }
         ]
     }
