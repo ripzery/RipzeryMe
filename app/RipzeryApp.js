@@ -7,11 +7,14 @@ const styles = {
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)"
+    },
+    textWhite: {
+        color: "white"
     }
 };
 
 class RipzeryApp extends React.Component {
-    constructor(){
+    constructor() {
         super();
         this.cursor = {
             show: true,
@@ -19,16 +22,52 @@ class RipzeryApp extends React.Component {
             element: '|',
             hideWhenDone: true,
             hideWhenDoneDelay: 500
+        };
+        this.cursorHide = {
+            show: false,
+            blink: true,
+            element: '|',
+            hideWhenDone: true,
+            hideWhenDoneDelay: 500
         }
     }
+
     render() {
         return (
             <div style={styles.centered}>
-                <h1>
-                    <Typist avgTypingSpeed={40} startDelay={2000} cursor={this.cursor}>
-                        Hi oh, hi there! I'm still working on this...
+                <h2 style={styles.textWhite}>
+                    <Typist startDelay={2000} cursor={this.cursor}>
+                        Today, many people think there is no miracle
+                    </Typist>
+                </h2>
+                <h2 style={styles.textWhite}>
+                    <Typist startDelay={6000} cursor={this.cursorHide}>
+                        But one says
+                    </Typist>
+                </h2>
+                <h1 style={styles.textWhite}>
+                    <Typist startDelay={7500} cursor={this.cursorHide}>
+                        "We already had miracle for 70 years"
                     </Typist>
                 </h1>
+                <br />
+                <h3 style={styles.textWhite}>
+                    <Typist avgTypingSpeed={400} startDelay={12000} cursor={this.cursorHide}>
+                        -- Forever be our king --
+                    </Typist>
+                </h3>
+                <h3 style={styles.textWhite}>
+                    <Typist stdTypingDelay={200} startDelay={14000} cursor={this.cursorHide}>
+                        October 13, 2016
+                    </Typist>
+                </h3>
+                <a style={styles.textWhite} href="https://blog.ripzery.me">
+                    <u>
+                        <Typist startDelay={18000} cursor={this.cursorHide}>
+                            Ripzery.me
+                        </Typist>
+                    </u>
+                </a>
             </div>
         )
     }
