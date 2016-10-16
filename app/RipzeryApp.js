@@ -35,35 +35,35 @@ class RipzeryApp extends React.Component {
     render() {
         return (
             <div style={styles.centered}>
-                <h2 style={styles.textWhite}>
-                    <Typist startDelay={2000} cursor={this.cursor}>
-                        Today, many people think there is no miracle
+                <p style={styles.textWhite} className="flow-text" >
+                    <Typist startDelay={2000} cursor={this.cursorHide}>
+                        "They say that a kingdom is like a pyramid: the king on top and the people below. But in this country it’s upside down"
                     </Typist>
-                </h2>
-                <h2 style={styles.textWhite}>
-                    <Typist startDelay={6000} cursor={this.cursorHide}>
-                        But one says
+                </p>
+                <p style={styles.textWhite} className="flow-text">
+                    <Typist startDelay={14000} cursor={this.cursorHide}>
+                        the king said, he pointed to his shoulder.
                     </Typist>
-                </h2>
-                <h1 style={styles.textWhite}>
-                    <Typist startDelay={7500} cursor={this.cursorHide}>
-                        "We already had miracle for 70 years"
+                </p>
+                <p style={styles.textWhite} className="flow-text">
+                    <Typist startDelay={17000} cursor={this.cursorHide}>
+                        “That’s why I sometimes have a pain around here.”
                     </Typist>
-                </h1>
+                </p>
                 <br />
-                <h3 style={styles.textWhite}>
-                    <Typist avgTypingSpeed={400} startDelay={12000} cursor={this.cursorHide}>
+                <p style={styles.textWhite}>
+                    <Typist startDelay={21000} cursor={this.cursorHide}>
                         -- Forever be our king --
                     </Typist>
-                </h3>
-                <h3 style={styles.textWhite}>
-                    <Typist stdTypingDelay={200} startDelay={14000} cursor={this.cursorHide}>
+                </p>
+                <p style={styles.textWhite}>
+                    <Typist startDelay={24000} cursor={this.cursorHide}>
                         October 13, 2016
                     </Typist>
-                </h3>
+                </p>
                 <a style={styles.textWhite} href="https://blog.ripzery.me">
                     <u>
-                        <Typist startDelay={18000} cursor={this.cursorHide}>
+                        <Typist startDelay={27000} cursor={this.cursorHide}>
                             Ripzery.me
                         </Typist>
                     </u>
